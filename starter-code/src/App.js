@@ -11,9 +11,7 @@ class App extends Component {
     allFoods: foods,
     selectedFoods: [],
     foodFilter: '',
-    newFoodForm: {
-      display: false
-    }
+    displayNewFoodForm: false,
   }
 
   displayFoods = () => {
@@ -36,15 +34,13 @@ class App extends Component {
   }
 
   toggleForm = () => {
-    let newFoodFormCopy = {...this.state.newFoodForm};
-    newFoodFormCopy.display = !newFoodFormCopy.display;
     this.setState({
-      newFoodForm: newFoodFormCopy
+      displayNewFoodForm: !this.state.displayNewFoodForm
     })
   }
 
   displayForm = () => {
-    if (this.state.newFoodForm.display) { return <Form submitForm={this.submitForm}></Form> }
+    if (this.state.displayNewFoodForm) { return <Form submitForm={this.submitForm}></Form> }
   }
 
   submitForm = (e) => {
