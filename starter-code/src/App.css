@@ -9,8 +9,7 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
-  padding: 20px;
+  padding: 10px;
   color: white;
 }
 
@@ -20,6 +19,63 @@
 
 .App-intro {
   font-size: large;
+}
+
+.App > .button {
+  margin: 0.5em 0px;
+}
+
+.searchBar {
+  margin: 0.5em 2% 0 2%;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+.form {
+  border: 1px solid lightgray;
+  padding: 0.5em 1em;
+  margin: 0.5em 5% 1em 5%;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+.form > * {
+  margin: 0.5em 0;
+}
+
+.form input {
+  padding: 0 0.3em;
+}
+
+.form #submit {
+  margin: 0.5em 20%;
+  grid-column: 1/-1;
+}
+
+#main {
+  margin-top: 0.5em;
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+}
+
+#summary {
+  margin: 0 1em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#summary h1 {
+  padding-bottom: 0.2em;
+}
+
+.listItem {
+  display: grid;
+  justify-items: start;
+  align-items: center;
+  grid-template-columns: 3fr 1fr;
+  padding: 0.3em 0;
 }
 
 @keyframes App-logo-spin {
